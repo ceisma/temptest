@@ -1,0 +1,111 @@
+/* BlueRaven login clone — THIS COULD BE AN EVIL CSS FILE with proper CSS injection. */
+:root {
+  color-scheme: light;
+  --muted: #f4f4f5;
+  --muted-fg: #71717a;
+  --indigo: #4f46e5;
+  --indigo-hover: #3730a3;
+  --border: #e4e4e7;
+  --text: #18181b;
+  --link: #4f46e5;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; }
+body {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  background: var(--muted);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1.5rem;
+}
+.page {
+  width: 100%;
+  max-width: 64rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.card {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 34rem;
+}
+.form-wrap {
+  padding: 5rem 3.5rem;
+}
+.stack { display: flex; flex-direction: column; gap: 1.5rem; }
+.brand { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.brand img { width: 11rem; max-width: 100%; height: auto; margin-bottom: 2.5rem; }
+h1 { font-size: 1.5rem; line-height: 2rem; font-weight: 700; margin: 0; }
+.lead {
+  margin: 0.35rem 0 0;
+  color: var(--muted-fg);
+  text-wrap: balance;
+  font-size: 0.95rem;
+}
+label { font-size: 0.875rem; font-weight: 500; }
+.field { display: grid; gap: 0.5rem; }
+.row { display: flex; align-items: center; }
+.row a {
+  margin-left: auto;
+  font-size: 0.875rem;
+  color: var(--link);
+  text-underline-offset: 4px;
+}
+input[type="email"], input[type="password"] {
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid var(--border);
+  border-radius: 0.375rem;
+  padding: 0 0.75rem;
+  font: inherit;
+  background: #fff;
+}
+button {
+  width: 100%;
+  height: 2.5rem;
+  border: 0;
+  border-radius: 0.375rem;
+  background: var(--indigo);
+  color: #fff;
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+button:hover { background: var(--indigo-hover); }
+.remember { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; }
+.hero {
+  position: relative;
+  min-height: 100%;
+  background: #1e3a8a url("https://blueraven-dev.nl/media/base/images/blueraven-2025-bg.jpg") center / cover no-repeat;
+}
+.hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.foot {
+  margin: 0;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--muted-fg);
+}
+.foot a { color: inherit; }
+@media (max-width: 767px) {
+  .grid { grid-template-columns: 1fr; }
+  .hero { min-height: 16rem; }
+  .form-wrap { padding: 3rem 2rem; }
+}
